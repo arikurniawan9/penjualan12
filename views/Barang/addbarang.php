@@ -9,6 +9,7 @@ foreach ($data['kdbarang'] as $kdbarang) {
     $kodebarang = $kode . sprintf("%04s", $urutan);
 }
 
+
 ?>
 
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -43,7 +44,7 @@ foreach ($data['kdbarang'] as $kdbarang) {
         </div>
         <div>
             <label class="form-label" for="">Harga Barang</label>
-            <input class="form-control" type="text" name="harga" id="" placeholder="Harga Barang" required>
+            <input class="form-control" type="text" name="harga" id="" placeholder="Harga Barang" value="" required>
         </div>
         <div>
             <label class="form-label" for="">Pengirim</label>

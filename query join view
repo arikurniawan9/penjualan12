@@ -1,0 +1,6 @@
+create view vbarang as
+select tbarang.idbarang, tbarang.nmbarang, tjenis.jenisbarang, tbarang.stok, tbarang.harga, tbarang.status, tdistributor.iddist, tdistributor.nmdist 
+From tbarang join tjenis
+on tbarang.idjenis=tjenis.idjenis
+join tdistributor
+on tbarang.iddist=tdistributor.iddist

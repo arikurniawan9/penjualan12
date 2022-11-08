@@ -1,12 +1,14 @@
+<!-- vpetugas required -->
+
 <?php
 
 if ($aksi == 'index') {
 	$data['petugas'] = $db->query($connect, "SELECT * FROM tpetugas");
-	$helpers->load_view('Petugas/listpetugas.php', $data);
+	$helpers->load_view('Petugas/listpetugas', $data);
 }
 
 if ($aksi == 'create') {
-	$helpers->load_view('Petugas/addpetugas.php');
+	$helpers->load_view('Petugas/addpetugas');
 }
 
 if ($aksi == 'save') {
@@ -26,7 +28,7 @@ if ($aksi == 'save') {
 if ($aksi == 'edit') {
 	$idpetugas = $uri[4];
 	$data['petugas'] = $db->query($connect, "SELECT * FROM tpetugas WHERE idpetugas=$idpetugas");
-	$helpers->load_view('Petugas/editpetugas.php', $data);
+	$helpers->load_view('Petugas/editpetugas', $data);
 }
 if ($aksi == 'update') {
 	$idpetugas = $uri[4];

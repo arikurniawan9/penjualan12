@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class=" scrollbar-type-1 sb-cyan">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penjualan</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="<?= $base_url; ?>/assets/vendors/metro4/css/metro-all.min.css">
+    <link rel="stylesheet" href="<?= $base_url; ?>/assets/css/index.css">
+
+    <title>Aplikasi Penjualan</title>
+
+    <script>
+        window.on_page_functions = [];
+    </script>
 </head>
-
-
-<body>
-    <link rel="stylesheet" href="<?= $base_url; ?>/assets/css/bootstrap.min.css">
+<body class="m4-cloak h-vh-100">
+<div data-role="navview" data-toggle="#paneToggle" data-expand="xl" data-compact="lg" data-active-state="true">

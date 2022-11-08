@@ -3,7 +3,7 @@
 if ($aksi == 'index') {
     # code...
     $data['barang'] = $db->query($connect, "SELECT * FROM vbarang");
-    $helpers->load_view('Barang/listbarang.php', $data);
+    $helpers->load_view('Barang/listbarang', $data);
 }
 
 if ($aksi == 'create') {
@@ -11,7 +11,7 @@ if ($aksi == 'create') {
     $data['kdbarang'] = $db->query($connect, "SELECT max(idbarang) AS kodebarang FROM tbarang");
     $data['jenis'] = $db->query($connect, "SELECT * FROM tjenis");
     $data['distri'] = $db->query($connect, "SELECT * FROM tdistributor");
-    $helpers->load_view('Barang/addbarang.php', $data);
+    $helpers->load_view('Barang/addbarang', $data);
 }
 if ($aksi == 'save') {
     $idbarang = $_POST['idbarang'];
@@ -21,7 +21,7 @@ if ($aksi == 'save') {
     $harga = $_POST['harga'];
     $iddist = $_POST['iddist'];
     $status = 1;
-    $simpan = $db->qry($connect, "INSERT INTO vbarang VALUES('$idbarang','$nmbarang','$idjenis','$stok','$harga','$iddist','$status')");
+    $simpan = $db->qry($connect, "INSERT INTO tbarang VALUES('$idbarang','$nmbarang','$idjenis','$stok','$harga','$iddist','$status')");
     if ($simpan)
         header('location:' . $base_url . 'barang');
     else {
@@ -32,7 +32,7 @@ if ($aksi == 'save') {
 if ($aksi == 'edit') {
     $idbarang = $uri[4];
     $data['barang'] = $db->query($connect, "SELECT * FROM tbarang WHERE idbarang=$idbarang");
-    $helpers->load_view('Barang/editbarang.php', $data);
+    $helpers->load_view('Barang/editbarang', $data);
 }
 if ($aksi == 'update') {
     # code...
