@@ -1,0 +1,23 @@
+di file index.html
+
+copy = 1-19 
+
+pindahkan/ paste ke header.php
+
+copy dari line : 20-366
+paste ke sidebar.php
+
+copy : 415-428
+paste di footer.php
+
+copy : 368-412
+paste di navbar.php
+
+copy : 414
+paste di dashboard.php
+
+
+buka file dashboard.html
+line : 105
+paste di file listjenis.php
+di atas div container

@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="app-bar-item">
+                <a href="" class="app-bar-item">
                     <span class="mif-cogs"></span>
                 </a>
             </div>
